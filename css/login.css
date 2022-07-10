@@ -1,0 +1,444 @@
+@media (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (min-width: 1000px) {
+  html {
+    font-size: 45%;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: black;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  overflow-x: hidden;
+}
+.box {
+  background: rgba(255, 255, 255, 0.296);
+  width: 300px;
+  position: absolute;
+  padding: 1rem;
+  padding-top: 2em;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.pop-up {
+  -webkit-animation: pop-up 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation: pop-up 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@-webkit-keyframes pop-up {
+  from {
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+@keyframes pop-up {
+  from {
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0.5em;
+}
+.back {
+  position: absolute;
+  top: 0;
+  left: 0.5em;
+}
+.txt_field {
+  position: relative;
+  border-bottom: 0.2rem solid #adadad;
+  margin: 3rem 0;
+}
+.txt_field input {
+  width: 50rem;
+  padding: 0 0.5rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #adadad;
+  transform: translateY(-1rem);
+  font-size: 2rem;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  font-size: 0.1rem;
+  background: #2691d9;
+  transition: 0.5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -0.5rem;
+  font-size: 1.5rem;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+.txt_field1 {
+  position: relative;
+  border-bottom: 0.2rem solid #adadad;
+  margin: -4rem 0;
+}
+.txt_field1 input {
+  width: 50rem;
+  padding: 0 0.5rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  border: none;
+  background: none;
+  outline: none;
+  margin-top: -10rem;
+  margin-left: 1.3rem;
+}
+.txt_field1 label {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #adadad;
+  transform: translateY(-1rem);
+  font-size: 2rem;
+  pointer-events: none;
+  margin-top: -1.6rem;
+  transition: 0.5s;
+}
+.txt_field1 span::before {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  font-size: 0.1rem;
+  background: #2691d9;
+  margin-top: -1.6rem;
+  transition: 0.5s;
+}
+.txt_field1 input:focus ~ label,
+.txt_field1 input:valid ~ label {
+  top: -0.5rem;
+  font-size: 1.5rem;
+  color: #2691d9;
+}
+.txt_field1 input:focus ~ span::before,
+.txt_field1 input:valid ~ span::before {
+  width: 100%;
+}
+
+.eye {
+  position: absolute;
+  top: 15rem;
+  left: 35rem;
+  cursor: pointer;
+}
+.fa {
+  color: #a6a6a6;
+  font-size: 1.5rem;
+}
+.abc5 {
+  color: #a6a6a6;
+  font-size: 2.5rem;
+  padding: 5px;
+}
+.close:hover .abc5 {
+  color: red;
+}
+.abc6 {
+  color: #a6a6a6;
+  font-size: 2.5rem;
+  padding: 5px;
+  cursor: pointer;
+}
+.abc6:hover {
+  color: aqua;
+}
+
+/*opt code*/
+
+.container {
+  display: flex;
+  flex-flow: column;
+  height: 60%;
+  align-items: space-around;
+  justify-content: center;
+}
+
+.userInput {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  clear: right;
+  margin-top: 1em;
+}
+
+.otp {
+  height: 3.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-family: arimo;
+  font-size: 2rem;
+  background: #eef2f3;
+}
+
+.title {
+  text-align: center;
+  font-family: arimo;
+  color: #adadad;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.title1 {
+  text-align: center;
+  font-family: arimo;
+  color: #adadad;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  position: relative;
+  z-index: 3;
+  bottom: 5rem;
+}
+.title2 {
+  text-align: center;
+  font-family: arimo;
+  color: #adadad;
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  position: relative;
+  z-index: 3;
+  bottom: 1rem;
+}
+.title3 {
+  font-family: arimo;
+  color: #adadad;
+  margin: 2rem 0;
+  font-size: 2em;
+}
+.abc {
+  color: #adadad;
+  font-size: 1.7rem;
+}
+.button1 {
+  width: 90%;
+  height: 4rem;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 2rem auto;
+  margin-top: 3rem;
+  color: #fffcfc;
+  background-color: rgb(164, 164, 164);
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+.button1:hover {
+  background-color: #2691d9;
+}
+.button3 {
+  width: 90%;
+  height: 4rem;
+  font-size: 1.7rem;
+  text-align: center;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  color: #fffcfc;
+  background-color: rgb(164, 164, 164);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 6;
+  top: 2rem;
+}
+.button3:hover {
+  background-color: #2691d9;
+}
+.abc2 {
+  text-align: center;
+  color: #adadad;
+  font-size: 1.7rem;
+}
+
+.other-btns {
+  display: flex;
+  gap: 10px;
+}
+.button2 {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 2rem;
+  width: 50%;
+  box-shadow: 0px 1px 5px hsl(0deg 0% 0% / 50%);
+  border: none;
+  cursor: pointer;
+}
+.button2:hover {
+  background-color: #00000040;
+}
+.img1 {
+  height: 3rem;
+  width: 3rem;
+}
+.abc3 {
+  text-align: center;
+  color: #adadad;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5em;
+  font-size: 1.7rem;
+}
+.img2 {
+  height: 6rem;
+  width: 6rem;
+}
+.abc4 {
+  margin-bottom: 5rem;
+}
+/* register */
+.txt_field2 {
+  position: relative;
+  border-bottom: 0.2rem solid #adadad;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+.txt_field2 input {
+  padding-right: 0.5em;
+  height: 3.5rem;
+  font-size: 1.6rem;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field2 label {
+  position: absolute;
+  top: 50%;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 1.9rem;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt_field2 span::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  background: #2691d9;
+  transition: 0.5s;
+}
+.txt_field2 input:focus ~ label,
+.txt_field2 input:valid ~ label {
+  top: -0.5rem;
+  font-size: 1.5rem;
+  color: #2691d9;
+}
+.txt_field2 input:focus ~ span::before,
+.txt_field2 input:valid ~ span::before {
+  width: 100%;
+}
+
+.title4 {
+  text-align: center;
+  font-family: arimo;
+  color: #adadad;
+  font-size: 2.8rem;
+}
+.image-field {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #adadad;
+  cursor: pointer;
+}
+.prof {
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
+  border: 0.3rem solid #adadad;
+}
+.choose {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.image-field:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+
+.eye1 {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+.otp-heading {
+  text-align: center;
+}
+.title5 {
+  text-align: center;
+  font-family: arimo;
+  color: #adadad;
+  font-size: 2.8rem;
+}
+.title6 {
+  font-family: arimo;
+  color: #adadad;
+  font-size: 1rem;
+  float: right;
+  margin-bottom: 1em;
+}
+
+.title6:hover {
+  color: aqua;
+}
+
+.shift-to-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.shift-to-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+

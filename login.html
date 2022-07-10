@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7a64b87c1c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css\login.css">
+  <title>login</title>
+</head>
+
+<body>
+
+  <div class=" hide shift-to-left box" id="register-section">
+
+    <div class="close">
+      <a href="#"><i class="abc5 fa fa-times fa-3x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="back">
+      <i class="abc6 fa-solid fa-arrow-left-long"></i>
+    </div>
+
+    <h1 class="title4">REGISTER</h1>
+
+    <div class="image-field">
+      <img src="img\bg.jpeg" id="output" class="prof" />
+      <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+      <label for="file" class="choose">Upload Image</label>
+    </div>
+
+    <div class="txt_field2">
+      <input type="text" style="color:#adadad;" required>
+      <label>NAME</label>
+      <span></span>
+    </div>
+
+    <div class="txt_field2">
+      <input type="password" id="password1" style="color:#adadad;" required>
+      <label>PASSWORD</label>
+      <div class="eye1">
+        <i class="fa fa-solid fa-eye" id="eye1" onclick="toggle1()"></i>
+      </div>
+      <span></span>
+    </div>
+
+    <div class="txt_field2">
+      <input type="password" id="password2" style="color:#adadad;" required>
+      <label>CONFIRM PASSWORD</label>
+      <div class="eye1">
+        <i class="fa fa-solid fa-eye" id="eye1" onclick="toggle1()"></i>
+      </div>
+      <span></span>
+    </div>
+
+    <div class="otp-heading">
+      <div class="title5"> OTP</div>
+      <a class="title6" href="#">RESENDOTP</a>
+    </div>
+
+    <div class="userInput">
+      <input class="otp" type="text" id='ist1' maxlength="1" onkeyup="clickEvent1(this,'sec')">
+      <input class="otp" type="text" id="sec1" maxlength="1" onkeyup="clickEvent1(this,'third')">
+      <input class="otp" type="text" id="third1" maxlength="1" onkeyup="clickEvent1(this,'fourth')">
+      <input class="otp" type="text" id="fourth1" maxlength="1">
+    </div>
+
+    <button class="button1">REGISTER</button>
+
+    <script>
+      var state1 = false;
+      function toggle1() {
+        if (state1) {
+          document.getElementById("password1").setAttribute("type", "password");
+          document.getElementById("eye1").style.color = '#7a797e';
+          state1 = false;
+
+        }
+        else {
+          document.getElementById("password1").setAttribute("type", "text");
+          document.getElementById("eye1").style.color = '#5887ef';
+          state1 = true;
+        }
+
+      }
+      function clickEvent1(first, last) {
+        if (first.value.length) {
+          document.getElementById(last).focus();
+        }
+      }
+      var loadFile = function (event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
+  </div>
+
+  <div class="box pop-up" id="login-section">
+    <div class="close">
+      <a href="#">
+        <i class="abc5 fa fa-times fa-3x" aria-hidden="true"></i></a>
+    </div>
+
+      <img src="img\PropTrack_Logo.png " class="img2" alt="">
+
+      <p class="abc3">
+        <span>India's most innovative real estate platform</span> 
+        <span>to simplify home search.</span>
+      </p>
+
+    <div class="txt_field2">
+      <input type="text" style="color:#adadad;" id="input-account" required>
+      <label>Enter Phone Number Or Email</label>
+      <span></span>
+    </div>
+
+    <button class="button1 submit">CONTINUE</button>
+
+    <p class="abc2">Or Connect With</p>
+
+    <div class="other-btns">
+      <button class="button2"><img src="img\facebook-logo-png-23.png" class="img1" alt=""></button>
+      <button class="button2"><img src="img\google-logo-9824.png" class="img1" alt=""></button>
+    </div>
+  </div>
+
+  <div class="box hide shift-to-right" id="password-section">
+    <div class="close">
+      <a href="#">
+        <i class="abc5 fa fa-times fa-3x" aria-hidden="true"></i></a>
+    </div>
+    <div class="back">
+      <i class="abc6 fa-solid fa-arrow-left-long"></i>
+    </div>
+    <h1 class="title4">ENTER PASSWORD</h1>
+    <p class="abc"> Enter password for abc123@email.com <a href="login.html" style="color:rgb(77, 2, 135);">Edit</a></p>
+    <div class="txt_field2">
+      <input type="password" id="password" style="color:#adadad;" required>
+      <label>PASSWORD</label>
+      <span></span>
+      <div class="eye1">
+        <i class="fa fa-solid fa-eye" id="eye" onclick="toggle()"></i>
+      </div>
+    </div>
+
+    <div class="title3">OR</div>
+    <div class="title4">ENTER OTP</div>
+
+    <div class="userInput">
+      <input class="otp" type="text" id='ist' maxlength="1" onkeyup="clickEvent(this,'sec')">
+      <input class="otp" type="text" id="sec" maxlength="1" onkeyup="clickEvent(this,'third')">
+      <input class="otp" type="text" id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+
+      <input class="otp" type="text" id="fourth" maxlength="1">
+    </div>
+    <button class="button1">LOGIN</button>
+
+    <script>
+
+      var state = false;
+      function toggle() {
+        if (state) {
+          document.getElementById("password").setAttribute("type", "password");
+          document.getElementById("eye").style.color = '#7a797e';
+          state = false;
+
+        }
+        else {
+          document.getElementById("password").setAttribute("type", "text");
+          document.getElementById("eye").style.color = '#5887ef';
+          state = true;
+        }
+
+      }
+      function clickEvent(first, last) {
+        if (first.value.length) {
+          document.getElementById(last).focus();
+        }
+      }
+    </script>
+  </div>
+
+  <script src="./js/login.js"></script>
+</body>
+
+</html>
