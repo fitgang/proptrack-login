@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #f7ff00;
+}
+
 @media (max-width: 1000px) {
   html {
     font-size: 55%;
@@ -26,6 +30,7 @@ body {
 	align-items: center;
 	justify-content: center;
   overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .box {
   background: rgba(255, 255, 255, 0.296);
@@ -255,8 +260,10 @@ body {
   font-size: 2em;
 }
 .abc {
-  color: #adadad;
-  font-size: 1.7rem;
+	color: #adadad;
+	font-size: 1.7rem;
+	margin-bottom: 2em;
+	word-wrap: anywhere;
 }
 .button1 {
   width: 90%;
@@ -328,7 +335,7 @@ body {
   color: #adadad;
   margin-top: 0.5rem;
   margin-bottom: 2.5em;
-  font-size: 1.7rem;
+  font-size: 1.5em;
 }
 .img2 {
   height: 6rem;
@@ -346,12 +353,13 @@ body {
   align-items: center;
 }
 .txt_field2 input {
-  padding-right: 0.5em;
-  height: 3.5rem;
-  font-size: 1.6rem;
-  border: none;
-  background: none;
-  outline: none;
+	padding-right: 2.5em;
+	height: 3.5rem;
+	font-size: 1.6rem;
+	border: none;
+	background: none;
+	outline: none;
+	width: 100%;
 }
 .txt_field2 label {
   position: absolute;
@@ -369,14 +377,14 @@ body {
   left: 0;
   width: 0%;
   height: 0.2rem;
-  background: #2691d9;
+  background: var(--primary-color);
   transition: 0.5s;
 }
 .txt_field2 input:focus ~ label,
 .txt_field2 input:valid ~ label {
   top: -0.5rem;
   font-size: 1.5rem;
-  color: #2691d9;
+  color: var(--primary-color);
 }
 .txt_field2 input:focus ~ span::before,
 .txt_field2 input:valid ~ span::before {
@@ -453,5 +461,6 @@ body {
 }
 
 .edit {
-  font-size: 0.9em;
+	font-size: 0.9em;
+	float: right;
 }
